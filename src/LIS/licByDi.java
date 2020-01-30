@@ -3,6 +3,7 @@ package LIS;
 public class licByDi {
     public static void main(String[] args) {
         int[] a = {8, 4, 12, 2, 3, 10, 14};
+        System.out.println(check(a));
     }
     public static int check(int[] a){
         int[][] mat= new int[a.length][a.length];
@@ -11,15 +12,15 @@ public class licByDi {
         for (int i=1;i<a.length;i++){
             int index=binatysearch(mat,lis,a[i]);
             mat[index][index]=a[i];
-            //copy
-            if (lis==index){
+            copyline(mat,lis);
+                if (lis==index){
                 lis++;
             }
         }
 
 
 
-        return 0;
+        return lis;
     }
     public static int binatysearch(int[][] mat,int lis, int num){
         if(num>mat[lis-1][lis-1]){
@@ -46,5 +47,9 @@ public class licByDi {
         }
        return -1;
     }
-    
+    public static void copyline(int[][] mat, int lis){
+        for (int i=0;i<lis;i++){
+            mat[lis][i]=mat[lis-1][i];
+        }
+    }
 }
