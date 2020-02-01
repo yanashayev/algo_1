@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class secri {
     public static void main(String[] args) {
-        int[] time= {3,4,10,2,1,5,6};
-
+        //int[] time= {3,4,10,2,1,5,6};
+int [] time={8,10,1};
         System.out.println(check(time));
       //  System.out.println(Arrays.toString(a));
     }
@@ -22,7 +22,7 @@ public class secri {
         System.out.println("avr "+avr);
 
     }
-
+        System.out.println(ans);
         return (ans/a.length);
     }
     public static int[] sort(int[] a){
